@@ -1,0 +1,23 @@
+const EventEmitter = require("events");
+
+// Create a custom EventEmitter class
+class MyEmitter extends EventEmitter {}
+
+const myEmitter = new MyEmitter();
+
+// Event listener for "greet"
+myEmitter.on("greet", (name) => {
+    console.log(`Hello, ${name}! Welcome to Node.js.`);
+});
+
+// Event listener for "exit"
+myEmitter.on("exit", () => {
+    console.log("Exit event triggered.");
+    console.log("Program is ending...");
+});
+
+// Trigger the "greet" event
+myEmitter.emit("greet", "Aryan");
+
+// Trigger the "exit" event
+myEmitter.emit("exit");
