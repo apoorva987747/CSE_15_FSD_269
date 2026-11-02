@@ -17,6 +17,7 @@ myEmitter.emit("click");
 setTimeout(() => {
   console.log("1. setTimeout");
 }, 0);
+
 setImmediate(() => {
   console.log("2. setImmediate");
 });
